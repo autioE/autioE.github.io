@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+    <button id="menu-button">☰</button>
+    <h1>Elias Aution portfolio</h1>
+    <a href=".html"></a>   <a href=".html"></a>
+</header>
+    <h2>Olen 17-vuotias tietotekniikan kaksoistutkinto opiskelija. Valmistun 2027 ja olen kiinnostunut tekemään töitä tieto-tekniikan alalla tulevaisuudessa.</h2> 
+    <ul class="custom-symbol">
+        <li>Olen ahkera sekä rauhallinen</li>
+        <li>Olen utelias oppimaan</li>
+        <li>Olen oma-aloitteinen</li>
+    </ul>
+    <div id="overlay"></div>
+    <div id="sidebar">
+        <button id="close-button">✖</button>
+        <a href="mailto:autioelias07@gmail.com">Ota yhteyttä sähköpostilla</a>
+        <a href="tel:+358443306255">Ota yhteyttä puhelimitse</a>
+    </div>
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const closeButton = document.getElementById("close-button");
+        const sidebar = document.getElementById("sidebar");
+
+        menuButton.addEventListener("click", () => {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");  // Näyttää hämärtyvän taustan
+        });
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+
+    // Sulkunappi
+    closeButton.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");  // Piilottaa hämärtyvän taustan
+    });
+        menuButton.addEventListener("click", () => {
+            sidebar.classList.add("active");
+        });
+
+        closeButton.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+        });
+    </script>
+    <div>
+        <h2>Projekteja:</h2 style="border-bottom">
+        <ul class="custom-symbol">
+            <li>Peliprojekti: Heartstrings of fear</li>
+            <li><a href="https://geronimo.okol.org/~auteli/">ansioluettelo</a></li>
+        </ul>
+    </div>
+<ul class="custom-symbol">
+    <li>Minua kiinnostaa tehdä nettisivuja</li>
+    <li>Minua kiinnostaa pelisuunnittelu</li>
+    <li>Minua kiinnostaa tekoäly</li>
+</ul>
+<h1></h1>
+<footer>
+    <button id="instagram-button">Minun Instagram</button>
+    <script>
+        const instagramButton = document.getElementById("instagram-button");
+
+        instagramButton.addEventListener("click", () => {
+            window.location.href = "https://www.instagram.com/eliassautio/";
+        });
+    </script>
+
+    <button id="tiktok-button">Minun Tiktok</button>
+    <script>
+        const tiktokButton = document.getElementById("tiktok-button"); 
+        tiktokButton.addEventListener("click", () => {
+            window.location.href = "https://www.tiktok.com/@eikka200";
+        });
+    </script>
+    <button id="github-button">Minun Github</button>
+    <script>
+        const githubButton = document.getElementById("github-button"); 
+
+        githubButton.addEventListener("click", () => {
+            window.location.href = "https://github.com/autioE";
+        });
+    </script>
+    <h1>Ota yhteyttä: autioelias07@gmail.com</h1>
+</footer>
+
+</body>
+</html>
